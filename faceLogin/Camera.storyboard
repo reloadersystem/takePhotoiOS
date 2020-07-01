@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5gE-8f-0WL">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Camera View Controller-->
+        <scene sceneID="qmM-Cn-6bo">
+            <objects>
+                <viewController id="5gE-8f-0WL" customClass="CameraViewController" customModule="faceLogin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OnY-Us-wcs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jYm-KG-01o">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kTc-y1-9K2">
+                                        <rect key="frame" x="150.66666666666666" y="669" width="112.99999999999997" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41" id="Kt5-8j-j7T"/>
+                                            <constraint firstAttribute="width" constant="113" id="WRG-jz-u1M"/>
+                                        </constraints>
+                                        <state key="normal" title="Take Picture"/>
+                                        <connections>
+                                            <action selector="takePhoto:" destination="5gE-8f-0WL" eventType="touchUpInside" id="rty-2S-dhw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="kTc-y1-9K2" firstAttribute="centerX" secondItem="jYm-KG-01o" secondAttribute="centerX" id="2y2-1L-3Ye"/>
+                                    <constraint firstAttribute="bottom" secondItem="kTc-y1-9K2" secondAttribute="bottom" constant="26" id="KCH-em-PSB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="jYm-KG-01o" firstAttribute="trailing" secondItem="6Wl-gs-Ocu" secondAttribute="trailing" id="131-JR-7pE"/>
+                            <constraint firstItem="jYm-KG-01o" firstAttribute="bottom" secondItem="6Wl-gs-Ocu" secondAttribute="bottom" id="Qvc-FO-JOw"/>
+                            <constraint firstItem="jYm-KG-01o" firstAttribute="top" secondItem="6Wl-gs-Ocu" secondAttribute="top" id="a7G-AX-OEy"/>
+                            <constraint firstItem="jYm-KG-01o" firstAttribute="leading" secondItem="6Wl-gs-Ocu" secondAttribute="leading" id="kw9-tx-4fT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Wl-gs-Ocu"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="kTc-y1-9K2" id="hzO-Xr-QXl"/>
+                        <outlet property="cameraView" destination="OnY-Us-wcs" id="qW6-DH-thH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l5Q-K5-1XU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="63.768115942028992" y="209.59821428571428"/>
+        </scene>
+    </scenes>
+</document>
